@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italian Food</title>
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> -->
+  <!-- STYLES -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- ICON -->  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      @font-face {
+        font-family: Reey;
+        src: url(css/fonts/Reey-Regular.otf);
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend:{
+          fontFamily: {
+            'openSans': ['"Open Sans" , sans-serif'],
+            'reey':['Reey'],
+            'montserrat':['Montserrat, sans-serif']
+          },
+        },
+      },
+    }
+    
+  </script>
+</head>
+
+<body class="bg-white overflow-x-hidden">
+  
+    <header class="bg-transparent absolute w-full z-10">
+      <div class="container mx-auto">
+        <nav class="p-5 lg:flex lg:items-center lg:justify-between uppercase tracking-widest font-bold font-OpenSans text-[1.042rem]">
+          <div class="flex justify-between items-center">
+            <span class="text-white text-2xl cursor-pointer flex items-center">
+              <img src="img/logo.png" class="h-10 inline mr-5">
+              Tailwind
+            </span>
+            <span class="text-3xl cursor-pointer lg:hidden block text-white flex items-center">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+          <ul class="lg:flex lg:items-center text-white z-[-1] lg:z-auto lg:static absolute w-full lg:w-auto lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 left-0 bg-[url('img/bg.jpg')] lg:bg-none pl-5">
+            <li class="mx-0 lg:mx-4 my-6 lg:my-0"><a href="#about">Home</a></li>
+            <li class="mx-0 lg:mx-4 my-6 lg:my-0"><a href="#featured">Menu</a></li>
+            <li class="mx-0 lg:mx-4 my-6 lg:my-0"><a href="#categories">Our Story</a></li>
+            <li class="mx-0 lg:mx-4 my-6 lg:my-0"><a href="#contact">Contact Us</a></li>
+            <li class="mx-0 lg:mx-4 my-6 lg:my-0 flex items-center justify-start pr-24">
+              <input class="rounded-full py-4 px-4 text-black w-full md:w-auto" placeholder="Search Here"/>
+              <ion-icon name="search-outline" class="ml-[-3rem] text-4xl text-[#343434] font-bold"></ion-icon>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="bg-[url('img/bg.jpg')] bg-cover w-[100vw] h-[100vh] min-h-[46rem]">
+      <div class="container mx-auto grid h-full lg:place-items-center justify-start relative overflow-visible">
+        <img src="img/plate.png" class="absolute right-0 bottom-[-8.5rem] xl:w-auto w-2/3 bg-contain">
+        <div class="text-white flex flex-col justify-evenly h-1/2 mx-5 mt-36 lg:mt-0">
+          <h2 class="font-reey text-8xl">Italian Food</h2>
+          <p class="font-openSans text-2xl">LOREMIPSUM DOLOR</p>
+          <button class="md:w-1/4 bg-white text-2xl text-black px-6 py-3 rounded-3xl font-extrabold hover:bg-blue-100">READ MORE</button>
+          <p class="font-openSans italic text-xl md:w-2/5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do iusmod tempor incididunt ut labore et dolore magna.</p>
+        </div>
+      </div>
+    </section> 
+
+
+    <section>
+      <div class="container mx-auto py-20">
+        <div class="text-center">
+          <h2 class="text-8xl font-reey my-12">Lorem Ipsum Dolor</h2>
+          <p class="font-openSans text-2xl mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. </p>
+        </div>
+        <div class="font-openSans text-left grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-36">
+          <div class="max-w rounded overflow-hidden">
+            <img class="w-full px-12" src="img/pasta1.png" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-2xl mb-2">Lorem Ipsum</div>
+              <p class="text-xl text-[#343434] text-base">
+                Lorem ipsum dolor sit amet,<br>
+                consectetur  adipisicing...
+              </p>
+            </div>
+          </div>
+          <div class="max-w rounded overflow-hidden">
+            <img class="w-full px-12" src="img/pasta2.png" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-2xl mb-2">Lorem Ipsum</div>
+              <p class="text-xl text-[#343434] text-base">
+                Lorem ipsum dolor sit amet,<br>
+                consectetur  adipisicing...
+              </p>
+            </div>
+          </div>
+          <div class="max-w rounded overflow-hidden">
+            <img class="w-full px-12" src="img/pasta3.png" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-2xl mb-2">Lorem Ipsum</div>
+              <p class="text-xl text-[#343434] text-base">
+                Lorem ipsum dolor sit amet,<br>
+                consectetur  adipisicing...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-20">
+          <button class="text-2xl font-openSans font-extrabold bg-black text-white px-12 py-4 rounded-3xl">SHOW MORE</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black">
+      <div class="container mx-auto py-20">
+        <div class="text-center text-white">
+          <h2 class="text-8xl font-reey my-12">Lorem Ipsum Dolor</h2>
+        </div>
+        <div class="text-xl font-montserrat text-left text-white grid grid-cols-1 lg:grid-cols-2 gap-2 mt-36">
+          <p class="px-24 py-8 lg:py-0">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex quia voluptas sit aspernatur
+          </p>
+          <p class="px-24 py-8 lg:py-0">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex quia voluptas sit aspernatur
+          </p>
+        </div>
+        <div class="flex justify-center items-center mt-20">
+          <button class="text-2xl font-montserrat font-bold bg-white text-black px-12 py-4 rounded-3xl">MORE INFO</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-20">
+      <div class="container mx-auto font-openSans">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center py-8">
+          <img class="w-full " src="img/pasta3.png" alt="Sunset in the mountains">
+          <div class="leading-none">
+            <h3 class="text-6xl font-bold">Discount up to 50% All Excursions</h3>
+            <p class="text-2xl my-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <div class="text-2xl my-12">
+              <a href="#featured" class="bg-black text-white px-16 py-4 rounded-3xl font-bold hover:bg-blue-100">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center py-8">
+          <div class="leading-none order-last md:order-none">
+            <h3 class="text-6xl font-bold">January’s Promo: Buy 1 Get 1 Free!</h3>
+            <p class="text-2xl my-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <div class="text-2xl my-12">
+              <a href="#featured" class="bg-black text-white px-16 py-4 rounded-3xl font-bold hover:bg-blue-100">READ MORE</a>
+            </div>
+          </div>
+          <div>
+            <img class="w-full" src="img/pasta2.png" alt="Sunset in the mountains">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[url('img/bg.jpg')] bg-no-repeat bg-cover py-48 min-h-[62rem]">
+      <div class="container mx-auto relative">
+        <img class="absolute top-[-21.25rem]" src="img/leaf.png">
+        <div class="text-white text-center">
+          <h2 class="font-reey text-6xl">Lorem Ipsum Dolor Sit Amer</h2>
+          <p class="font-montserrat text-2xl mt-20 px-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+        </div>
+        <img class="absolute md:right-20" src="img/pizza.png">
+      </div>
+    </section>
+
+    <section class="py-40">
+
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div class="p-12">
+            <h3 class="font-reey text-5xl text-center">Lorem Ipsum</h3>
+            <p class="text-2xl font-openSans mt-12">
+              Lorem ipsum dolor sit amet, consecte
+              sectetur adipisicing elit, tation omne 
+              ullamco laboris nisi ut aliqolore.
+            </p>
+          </div>
+          <div class="p-12">
+            <h3 class="font-reey text-5xl text-center">Lorem Ipsum</h3>
+            <p class="text-2xl font-openSans mt-12">
+              Lorem ipsum dolor sit amet, consecte
+              sectetur adipisicing elit, tation omne 
+              ullamco laboris nisi ut aliqolore.
+            </p>
+          </div>
+          <div class="p-12">
+            <h3 class="font-reey text-5xl text-center">Lorem Ipsum</h3>
+            <p class="text-2xl font-openSans mt-12">
+              Lorem ipsum dolor sit amet, consecte
+              sectetur adipisicing elit, tation omne 
+              ullamco laboris nisi ut aliqolore.
+            </p>
+          </div>
+        </div>
+        <p class="font-openSans font-semibold text-2xl px-24 text-center mt-44">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        </p>
+        <h2 class="font-openSans text-2xl font-bold text-center mt-20">Lorem Ipsum</h2>
+      </div>
+
+    </section>
+
+    <section class="bg-[#26282b] p-4 py-20 xl:p-80 text-center font-openSans">
+      <h2 class="text-8xl text-white font-bold">Title Here</h2>
+      <p class="text-4xl text-white mt-12 px-24">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. 
+      </p>
+      <form class="mt-20">
+        <input type="email" placeholder="Your email" class="rounded-full text-2xl p-5 md:w-1/2">
+          <button class="rounded-full text-2xl text-white font-bold bg-[#54524f] px-12 py-5 ml-[-5rem]">SUBSCRIBE</button>
+        </input>
+      </form>
+    </section>
+
+    <footer class="bg-white py-4 flex justify-evenly items-center">
+      <div class="container grid grid-cols-1 lg:grid-cols-5 py-80 px-12 font-montserrat">
+        <div class="lg:col-span-2">
+          <h3 class="text-4xl">Title Here</h3>
+          <p class="text-left pr-24 text-2xl mt-10 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus ex. Etiam nec dignissim elit, at dignissim enim.</p>
+          <ul class="w-40 flex justify-between items-center">
+            <li>
+              <a href="">
+                <ion-icon name="logo-instagram" class="text-4xl p-2"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <ion-icon name="logo-facebook" class="text-4xl p-2"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <ion-icon name="logo-twitter" class="text-4xl p-2"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <ion-icon name="logo-whatsapp" class="text-4xl p-2"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="text-4xl">About</h4>
+          <ul class="text-2xl mt-10">
+            <li class="py-2">
+              <a href="">
+                <span>History</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Our Team</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Brand Guidelines</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Terms&Condition</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Privacy Policy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-4xl">Services</h4>
+          <ul class="text-2xl mt-10">
+            <li class="py-2">
+              <a href="">
+                <span>How to Order</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Our Product</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Order Status</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Promo</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Payment Method</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-4xl">Other</h4>
+          <ul class="text-2xl mt-10">
+            <li class="py-2">
+              <a href="">
+                <span>Contact Us</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Help</span>
+              </a>
+            </li>
+            <li class="py-2">
+              <a href="">
+                <span>Privacy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      function Menu(e){
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]'),list.classList.add('opacity-100'),list.classList.add('z-[1]')) : (e.name = "menu", list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'),list.classList.remove('z-[1]'));
+      }
+    </script>
+</body>
+
+</html>
